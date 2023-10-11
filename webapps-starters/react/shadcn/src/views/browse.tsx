@@ -35,11 +35,10 @@ export default function Browse() {
 				try {
 					try {
 						module = await import(`../../../../../webapp/src/components/openv0_generated/${component.name}/${component.name}_${component.latest}.tsx`);
+						console.log('The good thing 🍏 ' + module)
 					} catch(e) {
-						console.log('The home screen is from here: ' + e)
+						console.log('The bad 🔴: ' + e)
 					}
-					console.log('The home screen is from here: ' + module)
-
 				} catch(e) {
 					return false
 				}

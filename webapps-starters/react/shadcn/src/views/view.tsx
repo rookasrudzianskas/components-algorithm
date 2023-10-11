@@ -74,7 +74,7 @@ function App() {
 				// Use dynamic import to load the component, and catch any errors
 				let module
 				try {
-					module = await import(importPath);
+					module = await import(`../../../../../webapp/src/components/openv0_generated/${component.name}/${component.name}_${component.version}.tsx`);
 
 					console.log('These are the components', module)
 
