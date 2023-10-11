@@ -27,14 +27,17 @@ export default function Browse() {
 
 		const imports = data.items.map(async (component) => {
 			// Construct the import path for each child component
-			const importPath = `${libRelativePath}/${component.name}/${component.name}_${component.latest}.tsx`;
-			console.log(importPath)
+			const importPath = ``;
+			console.log('Is it form where?', importPath)
 			try {
 				// Use dynamic import to load the component, and catch any errors
 				let module
 				try {
-					module = await import(importPath);
-
+					try {
+						module = await import(`../../../../../webapp/src/components/openv0_generated/${component.name}/${component.name}_${component.latest}.tsx`);
+					} catch(e) {
+						console.log('The home screen is from here: ' + e)
+					}
 					console.log('The home screen is from here: ' + module)
 
 				} catch(e) {
