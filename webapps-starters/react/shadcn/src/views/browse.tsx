@@ -33,13 +33,9 @@ export default function Browse() {
 				// Use dynamic import to load the component, and catch any errors
 				let module
 				try {
-					try {
-						module = await import(`../../../../../webapp/src/components/openv0_generated/${component.name}/${component.name}_${component.latest}.tsx`);
-						console.log('The good thing 🍏 ' + module)
-					} catch(e) {
-						console.log('The bad 🔴: ' + e)
-					}
+					module = await import(`../../../../../webapp/src/components/openv0_generated/${component.name}/${component.name}_${component.latest}.tsx`);
 				} catch(e) {
+					console.log('Error happened fetching component', e);
 					return false
 				}
 				return {
