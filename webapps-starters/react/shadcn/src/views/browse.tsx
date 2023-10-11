@@ -33,7 +33,8 @@ export default function Browse() {
 				// Use dynamic import to load the component, and catch any errors
 				let module
 				try {
-					module = await import(`../../../../../webapp/src/components/openv0_generated/${component.name}/${component.name}_${component.latest}.tsx`);
+					// module = await import(`../../../../../webapp/src/components/openv0_generated/${component.name}/${component.name}_${component.latest}.tsx`);
+					module = await import(`../../../../../webapp/src/components/openv0_generated/TweetCard_96P9W/TweetCard_96P9W_1697020558390.tsx`);
 				} catch(e) {
 					console.log('Error happened fetching component', e);
 					return false
